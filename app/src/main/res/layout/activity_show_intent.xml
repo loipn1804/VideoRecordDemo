@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <TextView
+        android:id="@+id/txtLog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#334455"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Play"/>
+
+    <Button
+        android:id="@+id/btnDialog"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/btnPlay"
+        android:text="Dialog"/>
+</RelativeLayout>
