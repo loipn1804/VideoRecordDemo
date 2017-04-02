@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="loiphan.videorecorddemo">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -12,10 +13,17 @@
     <application
         android:name=".activity.MyApplication"
         android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.MyTheme">
+        android:theme="@style/AppTheme"
+        android:vmSafeMode="true"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait">
@@ -37,10 +45,14 @@
             android:name=".activity.TimeActivity"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
             <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activity.PhotoActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

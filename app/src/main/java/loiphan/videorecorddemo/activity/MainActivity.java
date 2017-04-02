@@ -40,6 +40,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import butterknife.Bind;
@@ -124,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnValidName:
 //                validName();
-                Intent intent = new Intent(this, ShowIntentActivity.class);
+                Intent intent = new Intent(this, PhotoActivity.class);
                 intent.putExtra("message", "This is message!");
                 startActivity(intent);
                 break;

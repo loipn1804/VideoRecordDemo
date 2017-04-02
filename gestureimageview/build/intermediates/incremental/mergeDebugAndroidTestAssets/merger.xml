@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="debug"><source path="/Users/loiphan/Workspace/loipn1804/Shang/gestureimageview/build/intermediates/bundles/debug/assets"/></dataSet><dataSet config="main"><source path="/Users/loiphan/Workspace/loipn1804/Shang/gestureimageview/src/androidTest/assets"/><source path="/Users/loiphan/Workspace/loipn1804/Shang/gestureimageview/build/generated/assets/shaders/androidTest/debug"/></dataSet></merger>

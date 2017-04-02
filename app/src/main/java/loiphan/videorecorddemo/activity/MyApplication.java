@@ -27,18 +27,37 @@ public class MyApplication extends Application {
     }
 
     private void initImageLoader() {
+//        ImageLoaderConfiguration config = new ImageLoaderConfiguration
+//                .Builder(getApplicationContext())
+//                .threadPriority(Thread.NORM_PRIORITY)
+//                .memoryCacheSize(200 * 1024 * 1024)
+//                .diskCacheSize(400 * 1024 * 1024)
+//                .threadPoolSize(10)
+//                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
+//                .tasksProcessingOrder(QueueProcessingType.LIFO)
+//                //.imageDecoder(new NutraBaseImageDecoder(true))
+//                // Remove for release app
+//                .build();
+        // Initialize ImageLoader with configuration.
+//        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+//                .threadPriority(Thread.NORM_PRIORITY - 2)
+//                .denyCacheImageMultipleSizesInMemory()
+//                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
+//                .diskCacheSize(50 * 1024 * 1024) // 50 MiB
+//                .tasksProcessingOrder(QueueProcessingType.LIFO)
+//                .writeDebugLogs()
+//                .build();
         ImageLoaderConfiguration config = new ImageLoaderConfiguration
                 .Builder(getApplicationContext())
                 .threadPriority(Thread.NORM_PRIORITY - 1)
                 .memoryCacheSizePercentage(50)
-                .threadPoolSize(3)
+                .threadPoolSize(5)
                 .diskCacheFileNameGenerator(new Md5FileNameGenerator())
                 .memoryCache(new WeakMemoryCache())
                 .tasksProcessingOrder(QueueProcessingType.LIFO)
                 //.imageDecoder(new NutraBaseImageDecoder(true))
                 // Remove for release app
                 .build();
-        // Initialize ImageLoader with configuration.
         ImageLoader.getInstance().init(config);
     }
 

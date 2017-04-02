@@ -1,0 +1,19 @@
+lane :hockey do
+  # Adjust the `build_type` and `flavor` params as needed to build the right APK for your setup
+  gradle(
+    task: 'clean'
+  )
+  gradle(
+    task: 'assemble',
+    build_type: 'debug'
+  )
+  hockey(
+    notes: "Build number 1",
+    notify: '0',
+    status: '2',
+    api_token: 'something',
+    notes_type: '1',
+    mandatory: '1'
+  )
+  # ...
+end
